@@ -5,3 +5,46 @@
 layout: default
 title: Materio
 ---
+<body>
+    <header>
+        <h1>Materio</h1>
+        <nav>
+            <a href="#" id="resourcesTab" onclick="changeTab('resources')">Resources</a>
+            <a href="chat.html" id="chatTab">Chat</a>
+        </nav>
+    </header>
+
+   
+    <div class="content">
+        <h1>Welcome to Materio</h1>
+    </div>
+
+    <section>
+        <img src="deco/bag.png" alt="Bag" class="right-align">
+        <div class="rounded-rectangle">
+            Resources
+        </div>
+        <p>
+            Materio is a platform for learning and sharing knowledge. It's a place where you can find resources and chat with
+            other people about topics that interest you.
+        </p>
+        <form id="resourceForm">
+            <select id="semesterSelect" onchange="populateSubjects()">
+                <option value="1">1st Semester</option>
+                <option value="2">2nd Semester</option>
+                <option value="3" selected>3rd Semester</option>
+            </select>
+            <select id="subjectSelect" onchange="populateChapters()">
+            </select>
+            <select id="chapterSelect">
+            </select>
+            <button type="button" onclick="displayContent()">Submit</button>
+        </form>
+    </section>
+
+  
+    <section>
+        <div class="viewer">
+        <div id="contentDisplay"></div>
+        </div>
+    </section>
